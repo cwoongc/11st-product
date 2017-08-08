@@ -1,0 +1,32 @@
+---
+######################################################
+## Localhost
+######################################################
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@220.103.232.110:1525:DEV
+    username: tmall
+    password: tmall#stg1
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    lazyLoadingEnabled=true
+    aggressiveLazyLoading=false
+    mapUnderscoreToCamelCase=true
+
+---
+######################################################
+## Development
+######################################################
+spring:
+  profiles: dev
+
+---
+######################################################
+## Production
+######################################################
+spring:
+  profiles: production

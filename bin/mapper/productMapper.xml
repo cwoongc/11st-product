@@ -1,0 +1,10 @@
+<!--?xml version="1.0" encoding="UTF-8" ?-->
+<mapper namespace="kr.co.llst.product.mapper.ProductMapper">
+
+    <typeAlias alias="Product"  type="kr.co.llst.product.model.Product"/>
+
+    <select id="getProduct" resulttype="Product">
+        SELECT * FROM PD_PRD
+        WHERE ROWNUM=1
+    </select>
+</mapper>

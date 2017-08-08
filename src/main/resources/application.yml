@@ -1,0 +1,25 @@
+---
+######################################################
+## Localhost
+######################################################
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:oracle:thin:@10.40.44.105:10101:TMALL
+    username: TMALL
+    password: tmall#stg1
+    driver-class-name: oracle.jdbc.OracleDriver
+
+---
+######################################################
+## Development
+######################################################
+spring:
+  profiles: dev
+
+---
+######################################################
+## Production
+######################################################
+spring:
+  profiles: production

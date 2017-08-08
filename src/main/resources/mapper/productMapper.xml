@@ -1,0 +1,16 @@
+<!--?xml version="1.0" encoding="UTF-8" ?-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.llst.product.mapper.ProductMapper">
+
+    <resultMap id="productMap" type="kr.co.llst.product.model.Product">
+        <result column="prd_no" property="prdNo" />
+        <result column="prd_nm" property="prdNm" />
+    </resultMap>
+
+
+    <select id="getProduct" parameterType="long" resultMap="productMap">
+        SELECT * FROM PD_PRD
+        WHERE PRD_NO = #{prdNo}
+    </select>
+</mapper>

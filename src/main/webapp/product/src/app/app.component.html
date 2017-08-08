@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>상품 관리</h1>
+</div>
+<nav>
+  <a routerLink="/product/list" routerLinkActive="active">조회/수정</a>
+  <a routerLink="/product/add" routerLinkActive="active">등록</a>
+</nav>
+
+<div ngbDropdown class="d-inline-block">
+  <button class="btn btn-outline-primary" id="dropdownMenu1" ngbDropdownToggle>Toggle dropdown</button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <button class="dropdown-item">Action - 1</button>
+    <button class="dropdown-item">Another Action</button>
+    <button class="dropdown-item">Something else is here</button>
+  </div>
+</div>
+<router-outlet></router-outlet>
